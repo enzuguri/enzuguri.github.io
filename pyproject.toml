@@ -1,0 +1,23 @@
+[project]
+name = "enzuguri-garden"
+version = "0.1.0"
+description = "A small static site generator for an Obsidian vault"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "Jinja2>=3.1.0",
+    "Markdown>=3.5.0",
+    "livereload>=2.6.0",
+    "obsidiantools>=0.10.0",
+    "pymdown-extensions>=10.0",
+]
+
+[project.scripts]
+garden = "generator:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["generator"]

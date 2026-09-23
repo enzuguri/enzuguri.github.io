@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} - Digital Garden{% endblock %}
+{% block content %}
+<article>
+    <h1>{{ title }}</h1>
+    <div class="note-body">{{ html_content | safe }}</div>
+</article>
+{% if backlinks %}
+<section class="backlinks">
+    <h2>Linked references</h2>
+    <ul>{% for page in backlinks %}<li><a href="/{{ page.url }}">{{ page.title }}</a></li>{% endfor %}</ul>
+</section>
+{% endif %}
+{% endblock %}
