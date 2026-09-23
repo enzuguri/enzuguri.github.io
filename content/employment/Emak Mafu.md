@@ -1,6 +1,14 @@
 ---
-start_date: 10/10/2010
-end_date: 20/10/2010
+company: Emak Mafu
+role: Interactive Developer
+type: employment
+start_date: 2007-09
+end_date: 2008-10
+location: London, United Kingdom
+skills:
+	- ActionScript
+	- Flash
+	- FLEX
 ---
 
-Some initial content
+Architected Flash websites, mentored new hires, wrote documentation, and contributed to FLEXCamp.
