@@ -11,3 +11,5 @@ technologies:
 ---
 
 Built a UI engineering team while migrating a brownfield site to a modern React architecture. Created bespoke code and type generation tools around OpenAPI. Developed leadership strategies for documentation, churn reduction, and inter-team relations.
+Co-developed the product design system, integrated design tokens into the UI across all products, and built shared components for reusable logic and common interaction patterns.
+Iterated through several state management transistions from redux, recompose (higher order components), and to then best practice React hooks.
