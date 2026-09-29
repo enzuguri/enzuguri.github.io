@@ -46,3 +46,7 @@ VAULT_DIR=/path/to/vault uv run garden
 - Prefer focused changes that preserve the existing CLI and vault layout.
 - Run `uv run garden` and `uv run python -m compileall -q generator.py` after Python or template changes.
 - Do not commit `.venv/`, `dist/`, Python caches, or `*.egg-info/` directories.
+
+## Content Limits
+LinkedIn has a per-employment word count limit of 2,000 characters
+For a CV, we need to limit this to 600 characters otherwise it bloats the page rendering

@@ -15,3 +15,6 @@ Key activities included:
 - Multiple RFCs, EDDs, and supporting research documents to support teams and evolve the platform including the design of the entire client target architecture for all teams across the organisation. 
 - Worked across multiple stacks and technologies including Java/Kotlin, Python, Go, and TypeScript. Working in a variety of styles such as modular monoliths, micro-services, reactive frameworks, gRPC, WebSockets, REST.
 - Coordinated with partner platform teams (a11y, o11y, security) to align frontend architecture initiatives with their requirements.
+
+# CV Highlights
+
