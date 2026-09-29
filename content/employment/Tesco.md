@@ -11,4 +11,9 @@ methods:
   - Agile
 ---
 
-Provided delivery and technical oversight for fast-paced POS solutions based on web technology. Implemented process improvements using Domain-Driven Design and agile principles. Managed and mentored 3-6 agile teams, and developed organisation-wide strategies to reduce toil and improve efficiency.
+Provided delivery and technical management for fast-paced POS solutions based on web technology using Redux, React, and GraphQL in a Docker-based environment.
+Key activities included:
+- Managed 3-6 agile teams and developed organisation-wide strategies to reduce toil and improve team throughput efficiency including tracking capacity, accurate estimation, transitioning between sprints and Kanban, and on-call management.
+- Hands-on mentoring and training for interns and development teams, uplifting skills by demonstrating best practices to manage software scaling in domain-driven design and hexagonal design concepts through presentations, technical documents, proof of concept spikes, and pairing sessions.
+- Stakeholder management through product and program delivery and overall technical alignment. Resolving conflicts between team members to unblock work and avoid stalemates. Supporting promotions and reward structures across the team.
+- Led a number of technical initiatives including extraction of core functionality for use on handheld devices and strategies for merging long-running git branches for new payment systems.
