@@ -1,13 +1,15 @@
 ---
 type: skills
-skills:
-  - Diagramming
-  - Program Management
-  - Software Design
 ---
 
-# Top Skills
+# Proffesional
 
-- Diagramming
-- Program Management
+- Strategy
+- Technical writing
 - Software Design
+
+# Technical
+- JavaScript
+- TypeScript
+- Python
+- Kotlin

@@ -9,6 +9,7 @@ technologies:
   - React
   - Cloud
   - CI/CD
+cv_content: Frontend strategy for thesun.co.uk
 ---
 
 Served as Interim Head of Engineering for 6 months. Tackled technical debt across the Sun portfolio, modernised client-side architecture, aligned teams, and improved recruitment and structure. Designed a React migration strategy and cloud-native CI/CD pipelines.

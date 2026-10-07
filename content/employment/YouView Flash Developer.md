@@ -8,6 +8,7 @@ location: London, United Kingdom
 technologies:
   - Flash
   - ActionScript
+cv_content: STB software development in HTML
 ---
 
 Improved memory profiling tools, ported architecture to new frameworks, and contributed to agile development.

@@ -8,6 +8,7 @@ location: London, United Kingdom
 employment_type: contract
 technologies:
   - Flash
+cv_content: STB GUI development
 ---
 
 Developed performant GUI features for set-top boxes, wrote technical specifications, and collaborated with UX and design teams.

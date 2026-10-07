@@ -1,7 +1,5 @@
 ---
 type: languages
-languages:
-  - English
 ---
 
 # Languages

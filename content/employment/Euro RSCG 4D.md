@@ -8,6 +8,7 @@ location: London, United Kingdom
 technologies:
   - Flash
   - ActionScript
+cv_content: High-concept car manufacturer websites
 ---
 
 Developed a multilingual widget-based site for Jaguar, designed frameworks, and collaborated with teams globally.

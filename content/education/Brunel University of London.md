@@ -7,6 +7,4 @@ end_date: 2007
 location: London, United Kingdom
 ---
 
-# BSc Multimedia Technology and Design
-
-Brunel University of London, 2003-2007.
+Mixed disipline art/creative and engineering
