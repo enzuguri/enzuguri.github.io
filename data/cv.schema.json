@@ -90,11 +90,12 @@
     "project": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "date", "content"],
+      "required": ["title", "role", "status", "content"],
       "properties": {
         "title": { "type": "string", "minLength": 1 },
-        "organisation": { "type": "string", "minLength": 1 },
-        "date": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "minLength": 1 },
+        "link": { "type": "string", "minLength": 1 },
         "content": { "type": "string", "minLength": 1 }
       }
     }

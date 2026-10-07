@@ -142,8 +142,11 @@
                     {% for project in cv.projects %}
                     <article class="project">
                         <h3>{{ project.title | e }}</h3>
-                        <p class="job-meta">{% if project.organisation %}{{ project.organisation | e }} <span aria-hidden="true">|</span> {% endif %}{{ project.date | e }}</p>
+                        <p class="project-meta">{{ project.role | capitalize }} · {{ project.status | capitalize }}</p>
                         <p>{{ project.content | e }}</p>
+                        {% if project.link %}
+                        <a href="{{ project.link | e }}">{{ project.link | replace('https://www.github.com/', 'GitHub.com/') | replace('https://github.com/', 'GitHub.com/') | e }}</a>
+                        {% endif %}
                     </article>
                     {% endfor %}
                 </div>

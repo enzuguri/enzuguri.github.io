@@ -135,27 +135,29 @@
   "projects": [
     {
       "title": "Project Name",
-      "organisation": "Organisation",
-      "date": "2014",
-      "content": "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum. Suspendisse in ultricies arcu."
+      "role": "creator",
+      "status": "active",
+      "link": "https://github.com/example/project",
+      "content": "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum."
     },
     {
       "title": "Project Name",
-      "organisation": "Organisation",
-      "date": "2012",
+      "role": "creator",
+      "status": "active",
       "content": "Ut tempor tellus ut viverra aliquam. Vestibulum sollicitudin eleifend leo vel dignissim."
     },
     {
       "title": "Project Name",
-      "organisation": "Organisation",
-      "date": "2011",
-      "content": "Duis volutpat eleifend nisl, in gravida enim elementum in. Donec quis sem a lectus elementum."
+      "role": "contributor",
+      "status": "unmaintained",
+      "link": "https://github.com/example/library",
+      "content": "Duis volutpat eleifend nisl, in gravida enim elementum in."
     },
     {
       "title": "Project Name",
-      "organisation": "Organisation",
-      "date": "2009",
-      "content": "Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet nec vel urna."
+      "role": "contributor",
+      "status": "active",
+      "content": "Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet."
     }
   ]
 }

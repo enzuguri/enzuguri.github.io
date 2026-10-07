@@ -41,3 +41,7 @@ cv_content: |
 A front-page role must include `cv_content`. An older role with no `cv_content` is listed as company, role, and dates only. CV prose belongs in `cv_content`, not in a heading in the body.
 
 Roles that are one continuous tenure share a `tenure` id. Page 2 draws those roles on one rail and prints the company name only on the newest role. The id is explicit. Notes with the same id must sit next to each other in date order, and on the same CV page.
+
+## Project notes
+
+A note in `content/projects` needs `title`, `role`, `status`, and `link`. The body is the one-line CV description. Active projects are listed first.

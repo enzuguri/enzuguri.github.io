@@ -349,19 +349,19 @@ def _role_entries(notes: list[tuple[Path, dict, str]], *, front_page: bool) -> l
 
 
 def _project_entries(notes: list[tuple[Path, dict, str]]) -> list[dict]:
-    selected = sorted(notes, key=lambda item: _recency(item[1]), reverse=True)
+    selected = sorted(notes, key=lambda item: (str(item[1].get("status") or "") != "active", str(item[1].get("title") or item[0].stem).lower()))
     projects = []
     for path, meta, body in selected:
         content, _ = _copy(meta, body)
-        date = meta.get("date") or _format_range(meta.get("start_date"), meta.get("end_date"))
         project = {
             "title": str(meta.get("title") or path.stem),
-            "date": str(date),
+            "role": str(meta["role"]),
+            "status": str(meta["status"]),
             "content": content,
         }
-        organisation = meta.get("organisation") or meta.get("company")
-        if organisation:
-            project["organisation"] = str(organisation)
+        link = str(meta.get("link") or "").strip()
+        if link:
+            project["link"] = link
         projects.append(project)
     return projects
 
