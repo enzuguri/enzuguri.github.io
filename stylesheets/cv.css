@@ -5,6 +5,8 @@
   --muted: #6d6562;
   --rule: #e3dfdc;
   --bg: #527b97;
+  --spine: #c8c2be;
+  --tenure: #d5b9b8;
   --role: #8d7b76;
   --display: "Playfair Display", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
@@ -157,10 +159,12 @@ h2 {
 
 .job,
 .credential,
-.project { break-inside: avoid; }
+.project,
+.timeline .stop { break-inside: avoid; }
 
 .job h3,
-.project h3 {
+.project h3,
+.timeline h3 {
   font-size: 9pt;
   font-weight: 700;
   letter-spacing: 0.055em;
@@ -173,12 +177,14 @@ h2 {
   font-size: 8.5pt;
 }
 
-.job ul {
+.job ul,
+.timeline ul {
   margin-top: 1.4mm;
   padding-left: 3.6mm;
 }
 
-.job li {
+.job li,
+.timeline li {
   margin: 0.6mm 0;
   font-size: 9.5pt;
   line-height: 1.4;
@@ -187,9 +193,92 @@ h2 {
 
 .more { margin-top: 9mm; }
 
-.role-list { margin-top: 4.5mm; }
+.timeline { margin-top: 4.5mm; }
 
-.role-list .job + .job { margin-top: 4.2mm; }
+.timeline .group {
+  display: grid;
+  grid-template-columns: 42mm 1fr;
+  column-gap: 3mm;
+}
+
+.timeline .company {
+  margin: 0;
+  text-align: right;
+  font-size: 8.5pt;
+  font-weight: 600;
+  line-height: 3.6mm;
+}
+
+.timeline .stop {
+  display: grid;
+  grid-template-columns: 4.5mm 1fr;
+  column-gap: 2.8mm;
+}
+
+.timeline .gutter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline .up,
+.timeline .down {
+  width: 0.25mm;
+  background: var(--spine);
+}
+
+.timeline .up { flex: 0 0 0.7mm; }
+
+.timeline .down { flex: 1 1 auto; min-height: 0.4mm; }
+
+.timeline .group:first-child .stop:first-child > .gutter > .up { background: transparent; }
+
+.timeline .group:last-child .stop:last-child > .gutter > .down {
+  background: transparent;
+  flex: 0 0 0.4mm;
+}
+
+.timeline .dot {
+  width: 2.2mm;
+  height: 2.2mm;
+  flex: none;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.timeline h3 { line-height: 3.6mm; }
+
+.timeline .when {
+  margin-top: 0.4mm;
+  color: var(--muted);
+  font-size: 8.5pt;
+}
+
+.timeline .copy > p:not(.when) { margin-top: 0.6mm; }
+
+.timeline .joined .copy { padding-bottom: 2.1mm; }
+
+.timeline .joined > .gutter > .down,
+.timeline .joined + .stop > .gutter > .up {
+  width: 0.7mm;
+  background: var(--tenure);
+}
+
+.timeline .group.break { margin-top: 3.2mm; }
+
+.timeline .group.break > .roles { position: relative; }
+
+.timeline .group.break > .roles::before {
+  content: "";
+  position: absolute;
+  left: 2.25mm;
+  top: -3.2mm;
+  width: 0.25mm;
+  height: 3.2mm;
+  background: var(--spine);
+  transform: translateX(-50%);
+}
 
 .entry-grid {
   display: grid;

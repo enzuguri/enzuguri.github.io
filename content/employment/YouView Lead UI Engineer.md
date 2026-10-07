@@ -1,6 +1,7 @@
 ---
 company: YouView TV Limited
 role: Lead UI Engineer
+tenure: youview
 type: employment
 start_date: 2014-04
 end_date: 2015-04

@@ -100,9 +100,35 @@
 
             <section class="more">
                 <h2>Other Professional Experience</h2>
-                <div class="role-list">
+                <div class="timeline">
                     {% for entry in cv.otherExperience %}
-                    {{ role(entry) }}
+                    {% set tenure = entry.tenure | default('', true) %}
+                    {% set previous = loop.previtem.tenure | default('', true) if loop.previtem else '' %}
+                    {% set following = loop.nextitem.tenure | default('', true) if loop.nextitem else '' %}
+                    {% if not (tenure and tenure == previous) %}
+                    <div class="group{% if not loop.first %} break{% endif %}">
+                        <p class="company">{{ entry.company | e }}</p>
+                        <div class="roles">
+                    {% endif %}
+                            <article class="stop{% if tenure and tenure == following %} joined{% endif %}">
+                                <div class="gutter" aria-hidden="true"><span class="up"></span><span class="dot"></span><span class="down"></span></div>
+                                <div class="copy">
+                                    <h3>{{ entry.title | e }}</h3>
+                                    <p class="when">{{ entry.date | e }}</p>
+                                    <p>{{ entry.content | e }}</p>
+                                    {% if entry.highlights %}
+                                    <ul>
+                                        {% for item in entry.highlights %}
+                                        <li>{{ item | e }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </div>
+                            </article>
+                    {% if not (tenure and tenure == following) %}
+                        </div>
+                    </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </section>

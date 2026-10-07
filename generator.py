@@ -164,6 +164,7 @@ def markdown_to_cv_data(vault_dir: Path) -> dict:
         by_type.setdefault(_note_type(path, vault_dir, meta), []).append((path, meta, body))
     profile_notes = by_type.get("profile", [])
     roles = by_type.get("employment", [])
+    _assert_tenures(roles)
     experience = _role_entries(roles, front_page=True)
     contact = _contact_data(by_type.get("contact", []))
     if not contact["role"] and experience:
@@ -340,6 +341,9 @@ def _role_entries(notes: list[tuple[Path, dict, str]], *, front_page: bool) -> l
         }
         if highlights:
             role["highlights"] = highlights
+        tenure = _tenure_id(meta)
+        if tenure:
+            role["tenure"] = tenure
         roles.append(role)
     return roles
 
@@ -364,6 +368,32 @@ def _project_entries(notes: list[tuple[Path, dict, str]]) -> list[dict]:
 
 def _is_front_page(meta: dict) -> bool:
     return meta.get("front_page") in {True, "true", "yes", "1"}
+
+
+def _tenure_id(meta: dict) -> str:
+    return str(meta.get("tenure") or "").strip()
+
+
+def _assert_tenures(notes: list[tuple[Path, dict, str]]) -> None:
+    ordered = sorted(notes, key=lambda item: _recency(item[1]), reverse=True)
+    closed: set[str] = set()
+    index = 0
+    while index < len(ordered):
+        tenure = _tenure_id(ordered[index][1])
+        if not tenure:
+            index += 1
+            continue
+        role = f"{ordered[index][1].get('role')} at {ordered[index][1].get('company')}"
+        if tenure in closed:
+            raise SystemExit(f"tenure '{tenure}' on {role} is split by another role")
+        end = index
+        front_page = _is_front_page(ordered[index][1])
+        while end + 1 < len(ordered) and _tenure_id(ordered[end + 1][1]) == tenure:
+            end += 1
+            if _is_front_page(ordered[end][1]) != front_page:
+                raise SystemExit(f"tenure '{tenure}' includes roles on both CV pages")
+        closed.add(tenure)
+        index = end + 1
 
 
 def _recency(meta: dict) -> tuple[str, str]:

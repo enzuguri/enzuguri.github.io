@@ -1,6 +1,7 @@
 ---
 company: AnalogFolk
 role: Creative Technology Lead
+tenure: analogfolk
 type: employment
 start_date: 2011-07
 end_date: 2012-01

@@ -1,6 +1,7 @@
 ---
 company: AnalogFolk
 role: Acting Tech Director
+tenure: analogfolk
 type: employment
 start_date: 2012-01
 end_date: 2012-09

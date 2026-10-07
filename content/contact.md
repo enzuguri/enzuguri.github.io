@@ -9,4 +9,4 @@ telephone: +44 7884 497448
 github: https://github.com/enzuguri
 ---
 
-Senior Frontend IC
+Senior Full-stack IC

@@ -1,6 +1,7 @@
 ---
 company: YouView TV Limited
 role: Software Development Manager
+tenure: youview
 type: employment
 start_date: 2015-04
 end_date: 2017-08
