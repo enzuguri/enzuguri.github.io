@@ -59,6 +59,7 @@ dependencies = [
     { name = "markdown" },
     { name = "obsidiantools" },
     { name = "pymdown-extensions" },
+    { name = "pyyaml" },
 ]
 
 [package.metadata]
@@ -69,6 +70,7 @@ requires-dist = [
     { name = "markdown", specifier = ">=3.5.0" },
     { name = "obsidiantools", specifier = ">=0.10.0" },
     { name = "pymdown-extensions", specifier = ">=10.0" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
 ]
 
 [[package]]

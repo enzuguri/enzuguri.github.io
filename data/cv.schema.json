@@ -4,13 +4,17 @@
   "title": "CV",
   "type": "object",
   "additionalProperties": false,
-  "required": ["contact", "profile", "skills", "education", "experience", "otherExperience", "projects"],
+  "required": ["contact", "profile", "skills", "languages", "education", "experience", "otherExperience", "projects"],
   "properties": {
     "contact": { "$ref": "#/$defs/contact" },
     "profile": { "type": "string", "minLength": 1 },
     "skills": {
       "type": "array",
       "items": { "$ref": "#/$defs/skillGroup" }
+    },
+    "languages": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
     },
     "education": {
       "type": "array",
@@ -40,7 +44,8 @@
         "phoneNumber": { "type": "string", "minLength": 1 },
         "email": { "type": "string", "minLength": 1 },
         "location": { "type": "string", "minLength": 1 },
-        "linkedin": { "type": "string", "minLength": 1 }
+        "linkedin": { "type": "string", "minLength": 1 },
+        "github": { "type": "string", "minLength": 1 }
       }
     },
     "skillGroup": {

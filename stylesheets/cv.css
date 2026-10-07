@@ -4,7 +4,7 @@
   --ink: #3a3a3a;
   --muted: #6d6562;
   --rule: #e3dfdc;
-  --rose: #d5b9b8;
+  --bg: #527b97;
   --role: #8d7b76;
   --display: "Playfair Display", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
@@ -40,10 +40,9 @@ a { color: inherit; text-decoration: none; }
 
 .sheet {
   width: 210mm;
-  height: 297mm;
+  min-height: 297mm;
   padding: 14mm 15mm 12mm;
   background: var(--paper);
-  overflow: hidden;
 }
 
 .identity {
@@ -91,6 +90,9 @@ a { color: inherit; text-decoration: none; }
 
 .sidebar section + section { margin-top: 7.5mm; }
 
+.sidebar h2 + .credential,
+.languages { margin-top: 3.2mm; }
+
 h2 {
   padding-bottom: 1.4mm;
   border-bottom: 0.3mm solid var(--rule);
@@ -121,7 +123,8 @@ h2 {
   text-transform: uppercase;
 }
 
-.skills li {
+.skills li,
+.languages li {
   font-size: 9.5pt;
   line-height: 1.55;
 }
@@ -200,7 +203,7 @@ h2 {
     display: flex;
     justify-content: center;
     padding: 14mm 8mm 20mm;
-    background: var(--rose);
+    background: var(--bg);
   }
 
   main {

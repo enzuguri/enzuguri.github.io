@@ -9,6 +9,7 @@
         <a href="mailto:{{ contact.email | e }}">{{ contact.email | e }}</a>
         <span>{{ contact.location | e }}</span>
         <a href="{{ contact.linkedin | e }}">{{ contact.linkedin | replace('https://www.linkedin.com', 'LinkedIn.com') | replace('https://linkedin.com', 'LinkedIn.com') | e }}</a>
+        {% if contact.github %}<a href="{{ contact.github | e }}">{{ contact.github | replace('https://www.github.com/', 'GitHub.com/') | replace('https://github.com/', 'GitHub.com/') | e }}</a>{% endif %}
     </address>
 </header>
 {% endmacro -%}
@@ -72,6 +73,17 @@
                         </article>
                         {% endfor %}
                     </section>
+
+                    {% if cv.languages %}
+                    <section>
+                        <h2>Languages</h2>
+                        <ul class="languages">
+                            {% for language in cv.languages %}
+                            <li>{{ language | e }}</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endif %}
                 </div>
 
                 <section class="experience">
@@ -95,6 +107,7 @@
                 </div>
             </section>
 
+            {% if cv.projects %}
             <section class="more projects">
                 <h2>Projects</h2>
                 <div class="entry-grid">
@@ -107,6 +120,7 @@
                     {% endfor %}
                 </div>
             </section>
+            {% endif %}
         </article>
     </main>
 </body>

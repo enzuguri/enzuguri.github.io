@@ -5,9 +5,11 @@
     "phoneNumber": "+1 103 456 7890",
     "email": "youremailhere@gmail.com",
     "location": "Country, City, Zip",
-    "linkedin": "https://www.linkedin.com/in/username"
+    "linkedin": "https://www.linkedin.com/in/username",
+    "github": "https://github.com/username"
   },
   "profile": "Nullam id est nec libero iaculis. Pellentesque finibus, nibh et varius consectetur, felis leo dictum lorem in placerat urna nunc quis erat. Sed quis enim ac ultricies malesuada odio dictum nunc, ac laoreet nulla arcu eu justo. Etiam euismod purus sem, vel pellentesque erat varius ac. Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet nec vel urna.",
+  "languages": ["English", "Spanish"],
   "skills": [
     {
       "type": "Professional",

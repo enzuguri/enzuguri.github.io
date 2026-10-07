@@ -2,7 +2,7 @@
 type: skills
 ---
 
-# Proffesional
+# Professional
 
 - Strategy
 - Technical writing
