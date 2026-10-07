@@ -211,8 +211,9 @@ h2 {
 
 .timeline .stop {
   display: grid;
-  grid-template-columns: 4.5mm 1fr;
-  column-gap: 2.8mm;
+  grid-template-columns: 4.5mm minmax(58mm, 1fr) minmax(52mm, 1.15fr);
+  column-gap: 3.2mm;
+  align-items: stretch;
 }
 
 .timeline .gutter {
@@ -220,6 +221,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: stretch;
 }
 
 .timeline .up,
@@ -255,7 +257,17 @@ h2 {
   font-size: 8.5pt;
 }
 
-.timeline .copy > p:not(.when) { margin-top: 0.6mm; }
+.timeline .summary {
+  align-self: stretch;
+  margin: 0;
+  padding-left: 3.2mm;
+  border-left: 0.25mm solid var(--rule);
+  color: var(--muted);
+  font-size: 9pt;
+  line-height: 1.35;
+}
+
+.timeline .summary p { margin: 0; }
 
 .timeline .joined .copy { padding-bottom: 2.1mm; }
 
