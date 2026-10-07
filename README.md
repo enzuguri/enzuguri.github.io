@@ -17,3 +17,25 @@ VAULT_DIR=/path/to/vault uv run garden
 ```
 
 Notes with `published: false` in their frontmatter are skipped. Nested note directories and non-Markdown attachments are preserved in `dist/`.
+
+## Employment notes
+
+Each employment note has two copies. The note body is the website and LinkedIn text, capped at 2,000 characters. The CV reads `cv_content` from frontmatter and does not use the body.
+
+```yaml
+front_page: true
+cv_content: |
+  Led organisation-wide frontend initiatives at Miro.
+  - Cut browser memory by 800 MB and about 500 ms off initial load.
+  - Reduced client dependency cycles by two thirds.
+```
+
+`front_page: true` is set only on the four roles that fill page 1: Miro, DAZN, Tesco, and Velo. Every other employment note omits it. `cv_content` is a YAML literal block, so bullets stay markdown.
+
+| Field | Where | Cap |
+|---|---|---|
+| body | website and LinkedIn | 2,000 characters |
+| `cv_content` | `front_page: true` | 600 characters |
+| `cv_content` | every other role | 200 characters, optional |
+
+A front-page role must include `cv_content`. An older role with no `cv_content` is listed as company, role, and dates only. CV prose belongs in `cv_content`, not in a heading in the body.

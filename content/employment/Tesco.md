@@ -6,6 +6,11 @@ start_date: 2020-07
 end_date: 2021-05
 location: London, England, United Kingdom
 team_count: 3-6
+front_page: true
+cv_content: |
+    - Provided delivery and technical management for fast-paced POS solutions using Redux, React, and GraphQL.
+    - Managed 3-6 agile teams, enhancing throughput efficiency through strategic planning and agile methodologies.
+    - Mentored interns and development teams, promoting best practices in software scaling and design concepts.
 methods:
   - Domain-Driven Design
   - Agile
