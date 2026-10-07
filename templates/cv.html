@@ -1,0 +1,113 @@
+{% macro identity(contact) %}
+<header class="identity">
+    <div>
+        <h1>{{ contact.name | e }}</h1>
+        <p class="role">{{ contact.role | e }}</p>
+    </div>
+    <address class="contact">
+        <span>{{ contact.phoneNumber | e }}</span>
+        <a href="mailto:{{ contact.email | e }}">{{ contact.email | e }}</a>
+        <span>{{ contact.location | e }}</span>
+        <a href="{{ contact.linkedin | e }}">{{ contact.linkedin | replace('https://www.linkedin.com', 'LinkedIn.com') | replace('https://linkedin.com', 'LinkedIn.com') | e }}</a>
+    </address>
+</header>
+{% endmacro -%}
+{% macro role(entry) %}
+<article class="job">
+    <h3>{{ entry.title | e }}</h3>
+    <p class="job-meta">{{ entry.company | e }} <span aria-hidden="true">|</span> {{ entry.date | e }}</p>
+    <p>{{ entry.content | e }}</p>
+    {% if entry.highlights %}
+    <ul>
+        {% for item in entry.highlights %}
+        <li>{{ item | e }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</article>
+{% endmacro -%}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ cv.contact.name | e }} — {{ cv.contact.role | e }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/cv.css">
+</head>
+<body>
+    <main>
+        <article class="sheet" id="resume">
+            {{ identity(cv.contact) }}
+
+            <div class="columns">
+                <div class="sidebar">
+                    <section>
+                        <h2>Profile</h2>
+                        <p>{{ cv.profile | e }}</p>
+                    </section>
+
+                    <section class="skills">
+                        <h2>Skills</h2>
+                        {% for group in cv.skills %}
+                        <h3 class="skill-label">// {{ group.type | e }}</h3>
+                        <ul>
+                            {% for name in group.names %}
+                            <li>{{ name | e }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endfor %}
+                    </section>
+
+                    <section>
+                        <h2>Education</h2>
+                        {% for entry in cv.education %}
+                        <article class="credential">
+                            <h3>{% for line in entry.title.split('\n') %}{{ line | e }}{% if not loop.last %}<br>{% endif %}{% endfor %}</h3>
+                            {% if entry.institution %}<p>{{ entry.institution | e }}</p>{% endif %}
+                            {% if entry.date %}<p class="when">{{ entry.date | e }}</p>{% endif %}
+                            {% if entry.detail %}<p>{{ entry.detail | e }}</p>{% endif %}
+                        </article>
+                        {% endfor %}
+                    </section>
+                </div>
+
+                <section class="experience">
+                    <h2>Professional Experience</h2>
+                    {% for entry in cv.experience %}
+                    {{ role(entry) }}
+                    {% endfor %}
+                </section>
+            </div>
+        </article>
+
+        <article class="sheet" id="more">
+            {{ identity(cv.contact) }}
+
+            <section class="more">
+                <h2>Other Professional Experience</h2>
+                <div class="role-list">
+                    {% for entry in cv.otherExperience %}
+                    {{ role(entry) }}
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="more projects">
+                <h2>Projects</h2>
+                <div class="entry-grid">
+                    {% for project in cv.projects %}
+                    <article class="project">
+                        <h3>{{ project.title | e }}</h3>
+                        <p class="job-meta">{% if project.organisation %}{{ project.organisation | e }} <span aria-hidden="true">|</span> {% endif %}{{ project.date | e }}</p>
+                        <p>{{ project.content | e }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cv.schema.json",
+  "title": "CV",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contact", "profile", "skills", "education", "experience", "otherExperience", "projects"],
+  "properties": {
+    "contact": { "$ref": "#/$defs/contact" },
+    "profile": { "type": "string", "minLength": 1 },
+    "skills": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/skillGroup" }
+    },
+    "education": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/education" }
+    },
+    "experience": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/role" }
+    },
+    "otherExperience": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/role" }
+    },
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "$defs": {
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role", "phoneNumber", "email", "location", "linkedin"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "phoneNumber": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "minLength": 1 },
+        "location": { "type": "string", "minLength": 1 },
+        "linkedin": { "type": "string", "minLength": 1 }
+      }
+    },
+    "skillGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "names"],
+      "properties": {
+        "type": { "type": "string", "minLength": 1 },
+        "names": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "education": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "institution": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "minLength": 1 },
+        "detail": { "type": "string", "minLength": 1 }
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "company", "date", "content"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "company": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "minLength": 1 },
+        "content": { "type": "string", "minLength": 1 },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "date", "content"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "organisation": { "type": "string", "minLength": 1 },
+        "date": { "type": "string", "minLength": 1 },
+        "content": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

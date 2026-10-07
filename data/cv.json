@@ -1,0 +1,159 @@
+{
+  "contact": {
+    "name": "Jane Scott",
+    "role": "General Manager",
+    "phoneNumber": "+1 103 456 7890",
+    "email": "youremailhere@gmail.com",
+    "location": "Country, City, Zip",
+    "linkedin": "https://www.linkedin.com/in/username"
+  },
+  "profile": "Nullam id est nec libero iaculis. Pellentesque finibus, nibh et varius consectetur, felis leo dictum lorem in placerat urna nunc quis erat. Sed quis enim ac ultricies malesuada odio dictum nunc, ac laoreet nulla arcu eu justo. Etiam euismod purus sem, vel pellentesque erat varius ac. Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet nec vel urna.",
+  "skills": [
+    {
+      "type": "Professional",
+      "names": [
+        "Providing Discipline",
+        "Problem Solving",
+        "Planning Meetings",
+        "Reliability",
+        "Problem Solving"
+      ]
+    },
+    {
+      "type": "Technical",
+      "names": [
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Html & Css",
+        "Adobe Photoshop",
+        "Pages"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Enter Your Degree",
+      "institution": "Name of University",
+      "date": "2005 – 2007"
+    },
+    {
+      "title": "Enter Your Major",
+      "institution": "Name of University",
+      "date": "2005 – 2007"
+    },
+    {
+      "title": "Your Award\nName / Achievement",
+      "detail": "consectetur adipiscing elit. Donec quis."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Your Job Title Goes Here",
+      "company": "Company Name",
+      "date": "2008 – 2010",
+      "content": "Suspendisse tincidunt ullamcorper auctor. Nullam id nunc eu mauris molestie egestas. In viverra tristique dolor at laoreet. Aenean egestas sed quam vel hendrerit. Duis volutpat eleifend nisl, in gravida enim elementum in. Ut tempor tellus ut viverra aliquam. Vestibulum sollicitudin eleifend leo vel dignissim.",
+      "highlights": [
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum.",
+        "Suspendisse in ultricies arcu. Ut nec dignissim tortor.",
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum."
+      ]
+    },
+    {
+      "title": "Your Job Title Goes Here",
+      "company": "Company Name",
+      "date": "2008 – 2010",
+      "content": "Aenean egestas sed quam vel hendrerit. Duis volutpat eleifend nisl, in gravida enim elementum in. Ut tempor tellus ut viverra aliquam.",
+      "highlights": [
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum.",
+        "Suspendisse in ultricies arcu. Ut nec dignissim tortor.",
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum."
+      ]
+    },
+    {
+      "title": "Your Job Title Goes Here",
+      "company": "Company Name",
+      "date": "2008 – 2010",
+      "content": "Aenean egestas sed quam vel hendrerit. Duis volutpat eleifend nisl, in gravida enim elementum in. Ut tempor tellus ut viverra aliquam. Vestibulum sollicitudin eleifend leo vel dignissim.",
+      "highlights": [
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum.",
+        "Suspendisse in ultricies arcu. Ut nec dignissim tortor.",
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum."
+      ]
+    },
+    {
+      "title": "Your Job Title Goes Here",
+      "company": "Company Name",
+      "date": "2008 – 2010",
+      "content": "Aenean egestas sed quam vel hendrerit. Duis volutpat eleifend nisl, in gravida enim elementum in. Ut tempor tellus ut viverra aliquam.",
+      "highlights": [
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum.",
+        "Suspendisse in ultricies arcu. Ut nec dignissim tortor.",
+        "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum."
+      ]
+    }
+  ],
+  "otherExperience": [
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "2006 – 2008",
+      "content": "Aenean egestas sed quam vel hendrerit. Duis volutpat eleifend nisl, in gravida enim elementum in."
+    },
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "2004 – 2006",
+      "content": "Suspendisse in ultricies arcu. Ut nec dignissim tortor. Maecenas maximus turpis tellus."
+    },
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "2002 – 2004",
+      "content": "Vestibulum sollicitudin eleifend leo vel dignissim. Donec ornare eleifend sollicitudin."
+    },
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "2000 – 2002",
+      "content": "Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet nec vel urna."
+    },
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "1998 – 2000",
+      "content": "Pellentesque finibus, nibh et varius consectetur, felis leo dictum lorem in placerat."
+    },
+    {
+      "title": "Earlier Role Title",
+      "company": "Company Name",
+      "date": "1996 – 1998",
+      "content": "Etiam euismod purus sem, vel pellentesque erat varius ac. Sed quis enim ac ultricies malesuada."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project Name",
+      "organisation": "Organisation",
+      "date": "2014",
+      "content": "Maecenas maximus turpis tellus, sit amet gravida nisl laoreet elementum. Suspendisse in ultricies arcu."
+    },
+    {
+      "title": "Project Name",
+      "organisation": "Organisation",
+      "date": "2012",
+      "content": "Ut tempor tellus ut viverra aliquam. Vestibulum sollicitudin eleifend leo vel dignissim."
+    },
+    {
+      "title": "Project Name",
+      "organisation": "Organisation",
+      "date": "2011",
+      "content": "Duis volutpat eleifend nisl, in gravida enim elementum in. Donec quis sem a lectus elementum."
+    },
+    {
+      "title": "Project Name",
+      "organisation": "Organisation",
+      "date": "2009",
+      "content": "Nulla imperdiet fermentum blandit. Quisque eget nisi et urna gravida aliquet nec vel urna."
+    }
+  ]
+}

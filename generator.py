@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import os
 import re
 import shutil
@@ -9,12 +10,15 @@ from pathlib import Path
 
 import markdown
 from jinja2 import Environment, FileSystemLoader
+from jsonschema import Draft202012Validator
 from livereload import Server
 
 ROOT = Path(__file__).parent
 VAULT_DIR = ROOT / "content"
 DIST_DIR = ROOT / "dist"
 TEMPLATE_DIR = ROOT / "templates"
+CV_DATA = ROOT / "data" / "cv.json"
+CV_SCHEMA = ROOT / "data" / "cv.schema.json"
 WIKILINK_PATTERN = re.compile(r"(!?)\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]")
 
 
@@ -129,7 +133,39 @@ def build_site() -> None:
     stylesheet = ROOT / "stylesheets" / "styles.css"
     if stylesheet.is_file():
         shutil.copy2(stylesheet, DIST_DIR / "styles.css")
-    print(f"Built {len(notes)} note(s) into {DIST_DIR}")
+    render_cv(environment)
+    print(f"Built {len(notes)} note(s) and cv.html into {DIST_DIR}")
+
+
+def load_cv() -> dict:
+    document = json.loads(CV_DATA.read_text(encoding="utf-8"))
+    schema = json.loads(CV_SCHEMA.read_text(encoding="utf-8"))
+    errors = sorted(
+        Draft202012Validator(schema).iter_errors(document),
+        key=lambda error: list(error.absolute_path),
+    )
+    if not errors:
+        return document
+    rendered = "\n".join(
+        f"{'.'.join(str(part) for part in error.absolute_path) or '<root>'}: {error.message}"
+        for error in errors
+    )
+    raise SystemExit(f"CV data does not match data/cv.schema.json:\n{rendered}")
+
+
+def render_cv(environment: Environment) -> None:
+    cv = load_cv()
+    html = environment.get_template("cv.html").render(cv=cv)
+    (DIST_DIR / "cv.html").write_text(html, encoding="utf-8")
+    stylesheet = ROOT / "stylesheets" / "cv.css"
+    if stylesheet.is_file():
+        shutil.copy2(stylesheet, DIST_DIR / "cv.css")
+    print(
+        f"CV {cv['contact']['name']}: "
+        f"{len(cv['experience'])} roles, "
+        f"{len(cv['otherExperience'])} other, "
+        f"{len(cv['projects'])} projects"
+    )
 
 
 def serve() -> None:
@@ -137,6 +173,8 @@ def serve() -> None:
     server = Server()
     server.watch(str(configured_vault() / "**/*"), build_site)
     server.watch(str(TEMPLATE_DIR / "*.html"), build_site)
+    server.watch(str(ROOT / "stylesheets" / "*.css"), build_site)
+    server.watch(str(ROOT / "data" / "*.json"), build_site)
     print("Serving preview at http://127.0.0.1:5500")
     server.serve(root=str(DIST_DIR), port=5500)
 

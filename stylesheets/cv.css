@@ -1,0 +1,226 @@
+:root {
+  color-scheme: light;
+  --paper: #fff;
+  --ink: #3a3a3a;
+  --muted: #6d6562;
+  --rule: #e3dfdc;
+  --rose: #d5b9b8;
+  --role: #8d7b76;
+  --display: "Playfair Display", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 10pt;
+  line-height: 1.45;
+  background: #fff;
+}
+
+h1, h2, h3, p { margin: 0; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+address { font-style: normal; }
+
+a { color: inherit; text-decoration: none; }
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.sheet {
+  width: 210mm;
+  height: 297mm;
+  padding: 14mm 15mm 12mm;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.identity {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8mm;
+}
+
+.identity h1 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 34pt;
+  letter-spacing: 0.045em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.role {
+  margin-top: 2.2mm;
+  color: var(--role);
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--muted);
+  font-size: 8pt;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 62mm 1fr;
+  column-gap: 8mm;
+  margin-top: 9mm;
+  align-items: start;
+}
+
+.sidebar section + section { margin-top: 7.5mm; }
+
+h2 {
+  padding-bottom: 1.4mm;
+  border-bottom: 0.3mm solid var(--rule);
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sidebar p,
+.job p,
+.project p,
+.credential p {
+  margin-top: 2.6mm;
+  color: #444;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+
+.skill-label {
+  margin: 3.2mm 0 1mm;
+  color: var(--muted);
+  font-size: 8pt;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills li {
+  font-size: 9.5pt;
+  line-height: 1.55;
+}
+
+.credential + .credential {
+  margin-top: 3.2mm;
+  padding-top: 3.2mm;
+  border-top: 0.2mm solid var(--rule);
+}
+
+.credential h3 {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.credential .when,
+.job .job-meta,
+.project .job-meta {
+  color: var(--muted);
+}
+
+.credential .when { font-size: 8pt; }
+
+.experience h2 { margin-bottom: 4mm; }
+
+.experience .job + .job { margin-top: 5.6mm; }
+
+.job,
+.credential,
+.project { break-inside: avoid; }
+
+.job h3,
+.project h3 {
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.job .job-meta,
+.project .job-meta {
+  margin-top: 0.6mm;
+  font-size: 8.5pt;
+}
+
+.job ul {
+  margin-top: 1.4mm;
+  padding-left: 3.6mm;
+}
+
+.job li {
+  margin: 0.6mm 0;
+  font-size: 9.5pt;
+  line-height: 1.4;
+  list-style: disc;
+}
+
+.more { margin-top: 9mm; }
+
+.role-list { margin-top: 4.5mm; }
+
+.role-list .job + .job { margin-top: 4.2mm; }
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5.5mm 9mm;
+  margin-top: 4.5mm;
+}
+
+@media screen {
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 14mm 8mm 20mm;
+    background: var(--rose);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 14mm;
+  }
+
+  .sheet { box-shadow: 0 10px 28px rgba(80, 40, 40, 0.16); }
+}
+
+@media print {
+  .sheet {
+    break-after: page;
+    page-break-after: always;
+    box-shadow: none;
+  }
+
+  .sheet:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
