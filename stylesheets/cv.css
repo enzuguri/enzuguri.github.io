@@ -338,10 +338,35 @@ h2 {
 }
 
 @media print {
+  :root {
+    --display: Georgia, "Times New Roman", serif;
+    --sans: Arial, "Liberation Sans", sans-serif;
+  }
+
+  body {
+    font-family: Arial, "Liberation Sans", sans-serif;
+  }
+
+  .identity h1 {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
   .sheet {
+    width: auto;
+    min-height: 0;
     break-after: page;
     page-break-after: always;
     box-shadow: none;
+  }
+
+  .identity {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .columns {
+    break-before: avoid;
+    page-break-before: avoid;
   }
 
   .sheet:last-child {
