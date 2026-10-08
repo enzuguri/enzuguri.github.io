@@ -25,9 +25,9 @@ Each employment note has two copies. The note body is the website and LinkedIn t
 ```yaml
 front_page: true
 cv_content: |
-  Led organisation-wide frontend initiatives at Miro.
-  - Cut browser memory by 800 MB and about 500 ms off initial load.
-  - Reduced client dependency cycles by two thirds.
+  Intro paragraph.
+  - An important point.
+  - Some achievement.
 ```
 
 `front_page: true` is set only on the four roles that fill page 1: Miro, DAZN, Tesco, and Velo. Every other employment note omits it. `cv_content` is a YAML literal block, so bullets stay markdown.

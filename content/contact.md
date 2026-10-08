@@ -9,4 +9,4 @@ telephone: +44 7884 497448
 github: https://github.com/enzuguri
 ---
 
-Senior Full-stack IC
+Senior Full-stack Product Engineer

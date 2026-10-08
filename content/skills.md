@@ -4,12 +4,20 @@ type: skills
 
 # Professional
 
+- Technical communication
 - Strategy
-- Technical writing
-- Software Design
+- Software design
+- Agile/TDD/Scrum
 
-# Technical
-- JavaScript
-- TypeScript
+# Programming Languages
+- JavaScript/TypeScript
 - Python
 - Kotlin
+
+# Main Frameworks
+- React (Redux, ReactQuery, Signals)
+- GraphQL/gRPC/WebSockets/REST
+- RxJS (Observables)
+- node.js
+- FastAPI
+- K8's/Docker

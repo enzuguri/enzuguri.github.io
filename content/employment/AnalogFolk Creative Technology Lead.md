@@ -6,7 +6,11 @@ type: employment
 start_date: 2011-07
 end_date: 2012-01
 location: London, United Kingdom
-cv_content: Social media powered websites/integrations
+cv_content: Social media powered websites/integrations wiht Umbraco CMS development
+tags: 
+    - Umbraco
+    - Social Media
+    - React
 ---
 
 Introduced agile practices, prototyped technologies, upgraded legacy systems, and implemented CMS-integrated architectures.

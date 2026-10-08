@@ -5,19 +5,18 @@ type: employment
 start_date: 2021-06
 end_date: 2023-09
 location: London Area, United Kingdom
-team_size: 50+
-team_count_end: 10
 front_page: true
 cv_content: |
-    Led a 50+ person engineering organisation for DAZN TV applications on Android, iOS, web, and embedded platforms.
+    Led a 50+ person engineering organisation for DAZN TV applications on Android, iOS, web, and embedded platforms utilising micro-frontends.
     - Restructured the organisation from 7 to 10 teams using Team Topologies, which sped up onboarding of new TV platforms.
     - Managed headcount, hiring, promotions, and contractor capacity through reorganisations and leadership changes.
     - Technical lead for emergency mode, a lightweight failover of core DAZN functionality built for extreme outages.
-technologies:
+tags:
   - Android
   - iOS
   - Web
   - Embedded
+  - Micro-frontends
 ---
 
 Led a 50+ person engineering organisation, managing leaders, principals, and developers. Accountable for technical direction across TV application development for Android, iOS, web, and embedded platforms. Developed company-wide initiatives for employee experience, progression, health, communication, and scalability.

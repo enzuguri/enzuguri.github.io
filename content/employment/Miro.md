@@ -1,6 +1,6 @@
 ---
 company: Miro
-role: Principal Software Architect
+role: Principal Software Engineer
 type: employment
 start_date: 2023-09
 end_date: present
@@ -9,8 +9,8 @@ front_page: true
 cv_content: |
     Led organisation-wide frontend initiatives at Miro, advising Product and Engineering leadership and mentoring senior engineers.
     - Cut browser memory by 800 MB and about 500 ms off initial load through lazy-loading and fewer network requests.
-    - Reduced client monolith dependency cycles by two thirds with analysis tooling and automated conformance checks.
-    - Took proofs of concept to production, including Mermaid diagrams and AI extraction of prototype screens.
+    - Reduced client monolith dependency cycles by two thirds with custom analysis tooling and automated conformance checks in our 1m+ line Typescript codebase
+    - Took proofs of concept to production, including Mermaid diagrams and AI extraction of prototype screens via gRPC AI engine integration
     - Designed the client target architecture and aligned it with accessibility, observability, and security.
 ---
 

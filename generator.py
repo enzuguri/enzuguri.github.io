@@ -264,8 +264,7 @@ def _headline(body: str) -> str:
 
 def _profile_text(notes: list[tuple[Path, dict, str]]) -> str:
     _, _, body = _single_note(notes, "profile")
-    _, highlights = _split_copy(body)
-    text = _sentences(highlights)
+    text = body  # Do not strip; preserve leading/trailing newlines
     if not text:
         raise SystemExit("profile note has no body")
     return text
@@ -428,16 +427,6 @@ def _split_copy(text: str) -> tuple[str, list[str]]:
         else:
             prose.append(stripped)
     return " ".join(prose), highlights
-
-
-def _sentences(lines: list[str]) -> str:
-    sentences = []
-    for line in lines:
-        if line and line[-1] not in ".!?":
-            line = f"{line}."
-        if line:
-            sentences.append(line)
-    return " ".join(sentences)
 
 
 _MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")

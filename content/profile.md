@@ -1,23 +1,7 @@
 ---
 type: profile
-seniority:
-  - senior leadership
-  - management
-  - technical contributor
-years_senior_leadership: 3+
-years_management: 5+
-years_technical_contribution: 16+
-languages_used:
-  - JavaScript
-  - TypeScript
-  - Python
-  - Kotlin
-  - Java
-  - C#
 ---
 
-# Profile
-
-- ~3 years in senior leadership roles
-- 5+ years in management roles
-- 16+ years as a technical contributor
+Hands-on technical contributor since 2007 specialising in shipping large/complex frontend applications in Typescript and React. 
+Has worn many hats (senior management, architecture) and works well with others to drive the business forward. Builds tooling where missing, abstractions where necessary, and not afraid to go across the stack to solve a problem.
+Recent work pushes towards agentic features and development methodologies.

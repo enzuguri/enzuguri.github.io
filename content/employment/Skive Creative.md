@@ -8,7 +8,7 @@ location: London, United Kingdom
 technologies:
   - ActionScript
   - Flash
-cv_content: Interactive brand microsites
+cv_content: Interactive brand microsites. Complex games, particle systems, creative ad banners
 ---
 
 Developed Flash advergames, researched emerging technologies, oversaw deployments, and contributed to award-winning campaigns.

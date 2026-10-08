@@ -6,9 +6,9 @@ start_date: 2011-02
 end_date: 2011-06
 location: London, United Kingdom
 employment_type: contract
-technologies:
+tags:
   - Flash
-cv_content: STB GUI development
+cv_content: Hardware constrained STB GUI development. Low-level performance techniques such as blitting
 ---
 
 Developed performant GUI features for set-top boxes, wrote technical specifications, and collaborated with UX and design teams.

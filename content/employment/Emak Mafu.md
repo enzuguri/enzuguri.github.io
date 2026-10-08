@@ -9,7 +9,7 @@ tags:
 	- ActionScript
 	- Flash
 	- FLEX
-cv_content: Premium, design-focused Flash websites
+cv_content: Premium, design-focused Flash websites with Flex CMS integration
 ---
 
 Architected Flash websites, mentored new hires, wrote documentation, and contributed to FLEXCamp.
